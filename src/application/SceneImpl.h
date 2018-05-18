@@ -3,6 +3,10 @@
 
 #include "Actor.h"
 #include "Scene.h"
+#include <vector>
+
+
+using namespace std;
 
 class SceneImpl : public Scene {
 public:
@@ -11,7 +15,7 @@ public:
     int getActorCount();
     void setActor(Actor *);
 private:
-    Actor * actors[2];
+    vector<Actor *> actors;
     int actorCount;
 };
 

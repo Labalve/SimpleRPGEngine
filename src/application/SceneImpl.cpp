@@ -5,7 +5,7 @@ SceneImpl::SceneImpl() {
 }
 
 Actor * SceneImpl::getActor(int actorIndex) {
-    return this->actors[actorIndex];
+    return this->actors.at(actorIndex);
 }
 
 int SceneImpl::getActorCount() {
@@ -13,5 +13,6 @@ int SceneImpl::getActorCount() {
 }
 
 void SceneImpl::setActor(Actor * actor) {
-    this->actors[this->actorCount++] = actor;
+    this->actors.push_back(actor);
+    this->actorCount++;
 }

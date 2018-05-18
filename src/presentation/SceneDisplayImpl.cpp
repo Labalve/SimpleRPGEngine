@@ -7,7 +7,6 @@ SceneDisplayImpl::SceneDisplayImpl(Scene * scene) {
 
 Actor * SceneDisplayImpl::getMainActor(int actorIndex){
     return actorHandler->getActor(actorIndex);
-    //return scene->getActor(actorIndex);
 };
 
 void SceneDisplayImpl::display() {
