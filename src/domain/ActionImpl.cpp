@@ -1,4 +1,9 @@
 #include "ActionImpl.h"
 
-ActionImpl::ActionImpl() {
+ActionImpl::ActionImpl(std::string name) {
+    this->name = name;
+}
+
+std::string ActionImpl::getName() {
+    return name;
 }

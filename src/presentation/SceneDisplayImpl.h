@@ -3,14 +3,17 @@
 
 #include <string>
 #include <iostream>
+#include <vector>
 #include "../application/Actor.h"
 #include "../application/Scene.h"
-#include "ActorHandlerImpl.h"
+#include "../domain/Action.h"
+#include "../domain/ActionSet.h"
+#include "ActorHandler.h"
 
 class SceneDisplayImpl {
 
 public:
-    SceneDisplayImpl(Scene * scene);
+    SceneDisplayImpl(Scene * scene, ActorHandler * actorHandler);
     void display();
     
 private:

@@ -8,7 +8,7 @@ Actor * SceneImpl::getActor(int actorIndex) {
 }
 
 int SceneImpl::getActorCount() {
-    return actors.size();
+    return static_cast<int>(actors.size());
 }
 
 void SceneImpl::setActor(Actor * actor) {

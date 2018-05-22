@@ -14,8 +14,8 @@ public:
     Actor * getActor(int actorIndex);
     int getActorCount();
     void setActor(Actor *);
-private:
     vector<Actor *> actors;
+private:
 };
 
 #endif

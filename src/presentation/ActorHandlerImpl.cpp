@@ -7,7 +7,7 @@ ActorHandlerImpl::ActorHandlerImpl(Scene * scene) {
 
 void ActorHandlerImpl::setActors() {
     for(int i = 0; i < scene->getActorCount(); i++) {
-        actors.push_back(scene->getActor(i));
+        actors.insert(actors.begin(), scene->getActor(i));
     }
 }
 
@@ -16,7 +16,7 @@ Actor * ActorHandlerImpl::getActor(int actorIndex) {
 }
 
 Actor * ActorHandlerImpl::getActor(string name) {
-    for(int i = 0; i < actors.size(); i++) {
+    for(int i = 0; i < static_cast<int>(actors.size()); i++) {
         if(actors.at(i)->getName() == name) return actors.at(i);
     }
 }

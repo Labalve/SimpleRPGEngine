@@ -7,5 +7,9 @@ ActorImpl::ActorImpl(Character * character) {
 }
 
 string ActorImpl::getName(){
-    return this->character->getName();
+    return character->getName();
+}
+
+ActionSet * ActorImpl::getActionSet(){
+    return character->getActionSet();
 }

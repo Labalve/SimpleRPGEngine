@@ -15,10 +15,10 @@ public:
     vector<Actor *> getActors();
     Actor * getActor(int actorIndex);
     Actor * getActor(string name);
-    void setActors();
 private:
     vector<Actor *> actors;
     Scene * scene;
+    void setActors();
     
 };
 
