@@ -14,7 +14,7 @@ public:
     void display();
     
 private:
-    Actor * getMainActor(int actorIndex);
+    Actor * getMainActor();
     
     Scene * scene;
     ActorHandler * actorHandler;

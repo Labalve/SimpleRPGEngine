@@ -2,14 +2,10 @@
 
 using namespace std;
 
-ActorImpl::ActorImpl(string name) {
-    this->name = name;
+ActorImpl::ActorImpl(Character * character) {
+    this->character = character;
 }
 
 string ActorImpl::getName(){
-    return this->name;
-}
-
-string ActorImpl::setName(string name) {
-    this->name = name;
+    return this->character->getName();
 }

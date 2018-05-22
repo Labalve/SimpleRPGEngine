@@ -5,6 +5,8 @@
 #include "Script.h"
 #include "SceneScript.h"
 
+using namespace std;
+
 class ScriptImpl : public Script{
 public:
     ScriptImpl();

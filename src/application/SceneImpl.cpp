@@ -1,7 +1,6 @@
 #include "SceneImpl.h"
 
 SceneImpl::SceneImpl() {
-    actorCount = 0;
 }
 
 Actor * SceneImpl::getActor(int actorIndex) {
@@ -9,10 +8,9 @@ Actor * SceneImpl::getActor(int actorIndex) {
 }
 
 int SceneImpl::getActorCount() {
-    return this->actorCount;
+    return actors.size();
 }
 
 void SceneImpl::setActor(Actor * actor) {
     this->actors.push_back(actor);
-    this->actorCount++;
 }

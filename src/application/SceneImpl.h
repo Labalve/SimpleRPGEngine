@@ -16,7 +16,6 @@ public:
     void setActor(Actor *);
 private:
     vector<Actor *> actors;
-    int actorCount;
 };
 
 #endif

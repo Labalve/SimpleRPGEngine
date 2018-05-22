@@ -7,9 +7,6 @@ class Actor {
 
 public:
     virtual std::string getName() = 0;
-    virtual std::string setName(std::string name) = 0;
-    
-private:
     
 };
 

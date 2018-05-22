@@ -5,11 +5,11 @@ SceneDisplayImpl::SceneDisplayImpl(Scene * scene) {
     this->actorHandler = new ActorHandlerImpl(scene);
 }
 
-Actor * SceneDisplayImpl::getMainActor(int actorIndex){
-    return actorHandler->getActor(actorIndex);
+Actor * SceneDisplayImpl::getMainActor(){
+    return actorHandler->getActor(0);
 };
 
 void SceneDisplayImpl::display() {
-    std::cout<<this->getMainActor(0)->getName();
+    std::cout<<this->getMainActor()->getName();
 }
 
