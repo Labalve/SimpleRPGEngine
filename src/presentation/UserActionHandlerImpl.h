@@ -1,5 +1,5 @@
-#ifndef SCENEDISPLAYIMPL_H
-#define SCENEDISPLAYIMPL_H
+#ifndef USERACTIONHANDLERIMPL_H
+#define USERACTIONHANDLERIMPL_H
 
 #include <string>
 #include <iostream>
@@ -10,21 +10,18 @@
 #include "../domain/ActionSet.h"
 #include "ActorHandler.h"
 
-class SceneDisplayImpl {
-
+class UserActionHandlerImpl {
 public:
-    SceneDisplayImpl(Scene * scene, ActorHandler * actorHandler);
-    void display();
+    UserActionHandlerImpl(Scene * scene, ActorHandler * actorHandler);
+    void prompt();
     void setScene(Scene * scene);
     
 private:
-    Actor * getMainActor();
-    vector<Actor *> getOtherActors();
-    static std::string printActionList(ActionSet * actionSet);
-    
     Scene * scene;
     ActorHandler * actorHandler;
     
 };
 
+
 #endif
+

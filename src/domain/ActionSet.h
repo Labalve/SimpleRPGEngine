@@ -6,6 +6,8 @@
 
 using namespace std;
 
+class Action;
+
 class ActionSet {
     
 public:

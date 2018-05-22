@@ -6,6 +6,8 @@
 
 using namespace std;
 
+class ActionSet;
+
 class Character {
     
 public:
