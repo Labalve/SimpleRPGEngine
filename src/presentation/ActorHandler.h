@@ -13,7 +13,10 @@ public:
     virtual Actor * getActor(int) = 0;
     virtual Actor * getActor(string) = 0;
     virtual vector<Actor *> getActors() = 0;
-    
+    virtual int getActorsCount() = 0;
+    virtual vector<Actor *> getOtherActors() = 0;
+    virtual Actor * getMainActor() = 0;
+
 };
 
 #endif

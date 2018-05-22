@@ -18,6 +18,7 @@ public:
     
 private:
     Actor * getMainActor();
+    vector<Actor *> getOtherActors();
     
     Scene * scene;
     ActorHandler * actorHandler;

@@ -15,11 +15,15 @@ public:
     vector<Actor *> getActors();
     Actor * getActor(int actorIndex);
     Actor * getActor(string name);
+    int getActorsCount();
+    vector<Actor *> getOtherActors();
+    Actor * getMainActor();
+
 private:
     vector<Actor *> actors;
     Scene * scene;
     void setActors();
-    
+
 };
 
 #endif
