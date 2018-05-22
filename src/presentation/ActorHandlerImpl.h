@@ -2,6 +2,7 @@
 #define ACTORHANDLERIMPL_H
 
 #include "ActorHandler.h"
+#include "../domain/Action.h"
 #include "../application/Actor.h"
 #include "../application/Scene.h"
 #include <vector>
@@ -18,6 +19,7 @@ public:
     int getActorsCount();
     vector<Actor *> getOtherActors();
     Actor * getMainActor();
+    vector<Action *> getActorsActions();
 
 private:
     vector<Actor *> actors;

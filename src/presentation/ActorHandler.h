@@ -3,6 +3,7 @@
 
 #include <string>
 #include <vector>
+#include "../domain/ActionSet.h"
 #include "../application/Actor.h"
 #include "../application/Scene.h"
 
@@ -16,7 +17,7 @@ public:
     virtual int getActorsCount() = 0;
     virtual vector<Actor *> getOtherActors() = 0;
     virtual Actor * getMainActor() = 0;
-
+    virtual vector<Action *> getActorsActions() = 0;
 };
 
 #endif

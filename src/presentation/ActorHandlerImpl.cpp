@@ -6,7 +6,7 @@ ActorHandlerImpl::ActorHandlerImpl(Scene * scene) {
 }
 
 void ActorHandlerImpl::setActors() {
-    for(int i = 0; i < scene->getActorCount(); i++) {
+    for (int i = 0; i < scene->getActorCount(); i++) {
         actors.push_back(scene->getActor(i));
     }
 }
@@ -16,8 +16,8 @@ Actor * ActorHandlerImpl::getActor(int actorIndex) {
 }
 
 Actor * ActorHandlerImpl::getActor(string name) {
-    for(int i = 0; i < static_cast<int>(actors.size()); i++) {
-        if(actors.at(i)->getName() == name) return actors.at(i);
+    for (int i = 0; i < static_cast<int> (actors.size()); i++) {
+        if (actors.at(i)->getName() == name) return actors.at(i);
     }
 }
 
@@ -27,7 +27,7 @@ vector<Actor *> ActorHandlerImpl::getActors() {
 
 vector<Actor *> ActorHandlerImpl::getOtherActors() {
     vector<Actor *> otherActors;
-    for(int i = 1; i < getActorsCount(); i++){
+    for (int i = 1; i < getActorsCount(); i++) {
         otherActors.push_back(getActor(i));
     }
     return otherActors;
@@ -38,5 +38,15 @@ Actor * ActorHandlerImpl::getMainActor() {
 };
 
 int ActorHandlerImpl::getActorsCount() {
-    return static_cast<int>(actors.size());
+    return static_cast<int> (actors.size());
+}
+
+vector<Action *> ActorHandlerImpl::getActorsActions() {
+    vector<Action *> actions = getMainActor()->getActionSet()->getActions();
+    vector<Action *> currentActions;
+    for (int i = 1; i < getActorsCount(); i++) {
+        currentActions = getActor(i)->getActionSet()->getActions();
+        actions.insert(actions.end(), currentActions.begin(), currentActions.end());
+    }
+    return actions;
 }

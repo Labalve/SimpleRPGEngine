@@ -5,6 +5,8 @@ ActionImpl::ActionImpl(std::string title, std::string description, ActionEffect 
     this->title = title;
     this->description = description;
     this->effectDescription = "Action " + title + " not completed yet.";
+    performer = NULL;
+    target = NULL;
 }
 
 std::string ActionImpl::getTitle() {
@@ -12,9 +14,10 @@ std::string ActionImpl::getTitle() {
 }
 
 void ActionImpl::becomeCompleted() {
+    
+    effect->doOtherEffects();
     effect->affectPerformer(performer);
     effect->affectTarget(target);
-    effect->doOtherEffects();
     effectDescription = effect->getLog();
 }
 

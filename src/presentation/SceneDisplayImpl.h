@@ -21,6 +21,7 @@ private:
     Actor * getMainActor();
     vector<Actor *> getOtherActors();
     static std::string printActionList(ActionSet * actionSet);
+    static std::string printActionList(vector<Action *> actionVector);
     
     Scene * scene;
     ActorHandler * actorHandler;
