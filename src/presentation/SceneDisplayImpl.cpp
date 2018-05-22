@@ -12,7 +12,7 @@ Actor * SceneDisplayImpl::getMainActor(){
 std::string printActionList(ActionSet * actionSet) {
     string list = "";
     for(int i = 0; i < actionSet->getNumberOfActions(); i++) {
-         list = actionSet->getActions().at(i)->getName() + "\n";     
+         list += actionSet->getActions().at(i)->getName() + "\n";     
     }
     return list;
 }
